@@ -1,0 +1,96 @@
+* {
+    margin: 0; /*The CSS margin properties are used to create space around elements, outside of any defined borders.*/
+    padding: 0; /*The CSS padding properties are used to generate space around an element's content, inside of any defined borders.*/
+    font-family: "Oswald", sans-serif;/*In CSS, we use the font-family property to specify the font of a text.*/
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(iubat/44.jpg); /*The background-image property specifies an image to use as the background of an element.*/
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex; /*The display property is used to specify how an element is shown on a web page.*/
+  
+    justify-content: space-between;
+    align-items: center;/*To just center the text inside an element, use text-align: center*/
+
+}
+
+nav img {
+    width: 150px;/*The height and width properties are used to set the height and width of an element.*/
+
+}
+
+.nav-links {
+    flex: 1;/*The flexbox properties are supported in all modern browsers.*/
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+
+}
+table, th, td {
+    border: 1px solid; /*To specify table borders in CSS, use the border property.*/
+  }
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}/*An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".*/
+p.solid {outline-style: solid;}
+
+div {
+    width: 300px;
+    border: 15px solid green;/*All HTML elements can be considered as boxes.*/
+    padding: 50px;
+    margin: 20px;
+  }
+
+.nav-links ul li a {
+    color: white;/*The CSS opacity property sets the opacity for the whole element */
+    text-decoration: none;/*The CSS text-overflow property specifies how overflowed content that is not displayed should be signaled to the user.*/
+    font-size: 13px;
+}
+p {
+    text-align: center;/*elements on the page will be center-aligned, with a red text color*/
+    color: red;
+  }
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;/*CSS transitions allows  to change property values smoothly, over a given duration.*/
+}
+ul { 
+    list-style-type: none; /*Navigation Bars*/
+    margin: 0;
+    padding: 0;
+  }
+.nav-links ul li:hover:after {
+    width: 100%;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;/*Use the padding property to add space inside the text field.*/
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  body {
+    counter-reset: section;
+  }
+  
+  h2::before {
+    counter-increment: section; /*Automatic Numbering With Counters*/
+  }
