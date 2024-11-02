@@ -1,0 +1,30 @@
+/* This is Cascading Style Sheets */
+body{
+    background-color: lightblue;
+}
+h1{
+    color: #6a5acd;
+    margin: auto 50px;
+    text-align: center;
+}
+p{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+a {
+    color: hotpink;
+}
+img{
+    opacity: 60%;
+    border-radius: 5px;
+}
+table, th, td {
+    border:1px solid red;
+    padding: 25px;
+    border-radius: 10px;
+}
+ul{
+    list-style-type: square;
+}
