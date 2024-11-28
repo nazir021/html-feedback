@@ -1,30 +1,246 @@
 /* This is Cascading Style Sheets */
-body{
-    background-color: lightblue;
+body {
+    /* Background Color */
+    background-color: DodgerBlue;
 }
 h1{
-    color: #6a5acd;
-    margin: auto 50px;
+    /* Color */
+    color: black;
+
+    /* Text Alignment */
     text-align: center;
 }
-p{
-    text-transform: capitalize;
-    font-size: 20px;
-    font-weight: 600;
-    font-style: italic;
+.solid{
+    /* Border Color */
+    border-color: black;
+
+    /* Border Size */
+    border: 2px solid;
+
+    /* Border Radius */
+    border-radius: 5px;
+
+    /* Text Alignment */
+    text-align: center;
+
+    /* Margin(Outside Space) */
+    margin: 25px;
+
+    /* Padding(Inside Space) */
+    padding: 15px;
 }
-a {
-    color: hotpink;
+.division{
+    /* Border */
+    border: 2px solid black;
+
+    /* Outline Style */
+    outline-style: dotted;
+
+    /* Height */
+    height: 250px;
+
+    /* Width */
+    width: 50%;
+
+    text-align: center;
+    margin: 50px auto;
+    padding: 50px;
+
+    /* Font-Size */
+    font-size: 25px;
+
+    /* Font-Weight */
+    font-weight: bold;
+
+    /* Text Transform */
+    text-transform: capitalize;
+}
+a{
+    /* Text Decoration */
+    text-decoration: none;
+}
+a:link{
+    color: yellow;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    text-decoration: underline;
+}
+ul.a{
+    /* List Style Type */
+    list-style-type: circle;
+}
+table, th, td{
+    border: 1px solid;
+}
+span{
+    /* Display */
+    display: block;
+}
+div.relative{
+    /* Position */
+    position: relative;
+
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+    margin-top: 25px;
+}   
+div.absolute{
+    position: absolute;
+
+    /* Top Space */
+    top: 80px;
+
+    /* Right Space */
+    right: 0;
+
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
 }
 img{
-    opacity: 60%;
+    position: absolute;
+    top: 1200px;
+
+    /* Z-Index */
+    z-index: -1;
+}
+.overflow{
+    background-color: coral;
+    width: 200px;
+    height: 65px;
+    border: 1px solid black;
+
+    /* Overflow */
+    overflow: hidden;
+}
+.float{
+    width: 250px;
+    height: 100px;
+
+    /* Floating */
+    float: left;
+    padding: 15px;
+    display: block;
+}  
+.div1{
+    background: red;
+}  
+.div2{
+    background: yellow;
+}
+.div3{
+    background: green;
+}
+.dropbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+
+    /* Cursor Point */
+    cursor: pointer;
+}  
+.dropdown{
+    position: relative;
+    display: inline-block;
+}  
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+
+    /* Box Shadow */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}  
+.dropdown-content a:hover{
+    background-color: #f1f1f1
+}  
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown:hover .dropbtn{
+    background-color: #3e8e41;
+}
+input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    /* Bos Sizing */
+    box-sizing: border-box;
+}  
+input[type=submit]{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}  
+input[type=submit]:hover{
+    background-color: #45a049;
+}  
+.form{
     border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 50px;
 }
-table, th, td {
-    border:1px solid red;
-    padding: 25px;
-    border-radius: 10px;
+.transition{
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background: red;
+
+    /* Transition Time */
+    transition: width 2s;
+}  
+.transition:hover{
+    width: 300px;
 }
-ul{
-    list-style-type: square;
+.animation{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    /* Animation Name */
+    animation-name: example;
+
+    /* Animation Duration */
+    animation-duration: 20s;
+}
+@keyframes example{
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+.flex-container{
+    display: flex;
+    background-color: orange;
+    margin: 10px;
+}
+.flex-container > div{
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
 }
