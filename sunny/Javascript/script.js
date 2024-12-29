@@ -166,3 +166,69 @@ console.log(objectArr[0])
 console.log(objectArr[1].age)
 console.log(objectArr[1].job)
 console.log(objectArr[2])
+
+
+
+// Function
+// Function statement
+function funcName(){
+    console.log('I am form function statement')
+}
+funcName()
+
+// Function Expression
+var funName = function(){
+    console.log('I am form function expression')
+}
+funName()
+
+// Function argument is another function
+function funOne(name, callback){
+    var age = 25;
+    callback(age)
+    console.log('My Name is : ' + name)
+}
+function funTwo(a){
+    console.log('My age is : ' + a)
+}
+funOne('Sunny Bhaw', funTwo)
+
+// Function Returns function
+function functionName(name){
+    console.log('My Name is : ' + name)
+    return function funAge(a){
+        console.log('My Age is : ' + a)
+    }
+}
+functionName('Sunny Bhaw')(25)
+
+// ECMA SCRIPTS    -> ES5 support all the browser
+// Babble          -> Convert the latest javascript to es5
+
+
+
+// Closures
+function parent(a){
+    return function child(b){
+        console.log('Sum is : ' + (a+b))
+    }
+}
+// call the function
+parent(6)(4)
+// call the function another style
+var parentCall = parent(10)
+var childCall = parentCall(5)
+console.log(childCall)
+
+
+// IIFE     -> Immediately Invoked Function Expressions
+var controller = (function(){
+    var a = {
+        name: 'Mir Zahidul Alam',
+        age: 25
+    }
+    return a
+})()
+var interface = (function(){
+    console.log('Hello ' + controller.name)
+})()
